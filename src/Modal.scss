@@ -1,0 +1,106 @@
+@import "Global.scss";
+
+.container {
+    &.open {
+        display: block;
+    }
+
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    height: 100%;
+    left: 0;
+    overflow: auto;
+    padding-top: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.modal {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-width: 400px;
+    padding: 40px;
+    position: relative;
+    outline: 0;
+    width: 40vw;
+
+    &__title {
+        display: flex;
+        font-family: monospace;
+        font-size: 16px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__line {
+        background-color: black;
+        display: flex;
+        height: 1px;
+        justify-content: center;
+        margin: 30px auto;
+        width: 20%;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+
+        &__input {
+            border: 1px gray solid;
+            height: 35px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding: 2px 4px;
+            width: 100%;
+
+            &.error {
+                border: 1px #A50203 solid;
+            }
+
+            input {
+                border: 0;
+                outline: none;
+                width: 100%;
+
+                &:-webkit-autofill,
+                :-webkit-autofill:focus {
+                    transition: background-color 600000s 0s, color 600000s 0s;
+                }
+            }
+        }
+    }
+
+    &__button {
+        @include button;
+
+        margin-top: 30px;
+
+        &__loading {
+            align-items: center;
+            background-color: #f3f3f3;
+            border: 1px gray solid;
+            border-radius: 4px;
+            box-sizing: border-box;
+            display: flex;
+            font-family: monospace;
+            height: 35px;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    &__error {
+        margin-top: 30px;
+    }
+}

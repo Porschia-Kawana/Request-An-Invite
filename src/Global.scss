@@ -1,0 +1,36 @@
+@mixin text {
+    &--large {
+        font-size: 24px;
+    }
+
+    &--medium {
+        font-size: 18px;
+    }
+
+    &--bold {
+        font-weight: 900;
+    }
+}
+
+@mixin button {
+    background-color: #fff;
+    border: 1px gray solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: monospace;
+    height: 35px;
+    width: 100%;
+
+    &:hover {
+        background-color: #f3f3f3;
+    }
+
+    button {
+        background-color: transparent;
+        border: 0;
+        border-radius: 4px;
+        height: 100%;
+        width: 100%;
+    }
+}

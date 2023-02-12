@@ -1,0 +1,46 @@
+@import "Global.scss";
+
+.app {
+  display: grid;
+  font-family: monospace;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  width: 100vw;
+
+  .header {
+    border-bottom: 1px black solid;
+    font-size: 24px;
+    padding: 15px 30px;
+
+    &__text {
+      @include text;
+    }
+  }
+
+  .section {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-self: center;
+    min-width: 250px;
+    text-align: center;
+    width: 25vw;
+
+    &__text {
+      @include text;
+    }
+
+    &__button {
+      @include button;
+    }
+  }
+
+  .footer {
+    border-top: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px;
+    text-align: center;
+  }
+}
