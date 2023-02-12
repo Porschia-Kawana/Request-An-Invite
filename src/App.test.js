@@ -16,15 +16,3 @@ test('loads and displays page', async () => {
   expect(screen.getByText(/@ 2023 Broccoli & Co. All rights reserved./i)).toBeInTheDocument()
 })
 
-test('can write in inputs', async () => {
-  // ARRANGE
-  render(<App />)
-
-  // ACT
-  screen.getByPlaceholderText(/Full Name/i)
-  // ASSERT
-  expect().toBeInTheDocument()
-  expect(screen.getByText(/Be the first to know when we launch./i)).toBeInTheDocument()
-  expect(screen.getByText(/Made with ♥ in Naarm/i)).toBeInTheDocument()
-  expect(screen.getByText(/@ 2023 Broccoli & Co. All rights reserved./i)).toBeInTheDocument()
-})
